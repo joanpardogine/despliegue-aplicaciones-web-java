@@ -1,0 +1,331 @@
+<!DOCTYPE html
+   PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="es" xml:lang="es" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+   <style>
+      @import url(https://ikastaroak.ulhi.net/edu/style/ULHI22/base.css);
+   </style>
+   <link rel="stylesheet" type="text/css" href="A.content.css.pagespeed.cf.iOubMBlGNH.css" />
+   <style>
+      @import url(https://ikastaroak.ulhi.net/edu/style/ULHI22/nav.css);
+   </style>
+   <meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+   <title>2.- Despliegue de aplicaciones con Tomcat | Despliegue de aplicaciones web Java. </title>
+   <link rel="shortcut icon" href="./image/favicon.ico" type="image/x-icon" />
+   <meta http-equiv="content-language" content="es" />
+   <meta name="generator" content="eXeLearning 2.2 - exelearning.net" />
+   <script type="text/javascript" src="exe_jquery.js.pagespeed.jm.roLDJ9nOeu.js"></script>
+   <script src="common_i18n.js+common.js.pagespeed.jc.y5nduQJzlB.js"></script>
+   <script>eval(mod_pagespeed_hIROIhtvDX);</script>
+   <script>eval(mod_pagespeed_jj85KjL_7$);</script>
+   <meta name="viewport" content="width=device-width, initial-scale=1" />
+   <script
+      type="text/javascript">var path = "my_js.js"; if (document.domain == "ikastaroak.ulhi.net" || document.domain == "ikastaroakpre.ulhi.net") path = "https://ikastaroak.ulhi.net/edu/style/ULHI22/my_js.js"; document.write(unescape("%3Cscript src=\'" + path + "\'type=\'text/javascript\'%3E%3C/script%3E"));</script>
+</head>
+
+<body class="exe-web-site" id="exe-node-28">
+   <script type="text/javascript">document.body.className += " js"</script>
+   <div id="content">
+      <p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+      <div id="header">
+         <div id="headerContent">Despliegue de aplicaciones web Java.</div>
+      </div>
+      <div id="siteNav">
+         <ul>
+            <li><a href="website_index.html" class="daddy main-node">Despliegue de aplicaciones web Java.</a></li>
+            <li><a href="website_1_aplicaciones_web_y_servidores_de_aplicaciones.html" class="daddy">1.- Aplicaciones
+                  web y servidores de aplicaciones.</a>
+               <ul class="other-section">
+                  <li><a href="website_11_el_servidor_de_aplicaciones_tomcat.html" class="daddy">1.1.- El servidor de
+                        aplicaciones Tomcat.</a>
+                     <ul class="other-section">
+                        <li><a href="website_111_instalacin_y_configuracin_bsica.html" class="daddy">1.1.1.-
+                              Instalación y configuración básica.</a>
+                           <ul class="other-section">
+                              <li><a href="website_1111_instalacin_manual_en_linux.html" class="no-ch">1.1.1.1.-
+                                    Instalación manual en Linux.</a></li>
+                              <li><a href="website_1112_integracin_con_apache.html" class="no-ch">1.1.1.2.- Integración
+                                    con Apache.</a></li>
+                           </ul>
+                        </li>
+                        <li><a href="website_112_proteccin_del_servidor_de_aplicaciones.html" class="no-ch">1.1.2.-
+                              Protección del servidor de aplicaciones.</a></li>
+                     </ul>
+                  </li>
+                  <li><a href="website_12_aplicaciones_web_java_ee.html" class="daddy">1.2.- Aplicaciones web Java
+                        EE.</a>
+                     <ul class="other-section">
+                        <li><a href="website_121_servlets.html" class="daddy">1.2.1.- Servlets.</a>
+                           <ul class="other-section">
+                              <li><a href="website_1211_llamada_a_servlets.html" class="no-ch">1.2.1.1.- Llamada a
+                                    servlets.</a></li>
+                              <li><a href="website_1212_ejemplo.html" class="no-ch">1.2.1.2.- Ejemplo.</a></li>
+                           </ul>
+                        </li>
+                        <li><a href="website_122_java_server_pages__jsp.html" class="daddy">1.2.2.- Java Server Pages -
+                              JSP.</a>
+                           <ul class="other-section">
+                              <li><a href="website_1221_scripts_jsp.html" class="no-ch">1.2.2.1.- Scripts JSP.</a></li>
+                              <li><a href="website_1222_incluir_un_jsp_dentro_de_otro.html" class="no-ch">1.2.2.2.-
+                                    Incluir un JSP dentro de otro.</a></li>
+                           </ul>
+                        </li>
+                        <li><a href="website_123_arquitectura_mvc.html" class="daddy">1.2.3.- Arquitectura MVC.</a>
+                           <ul class="other-section">
+                              <li><a href="website_1231_java_server_faces__jsf.html" class="no-ch">1.2.3.1.- Java Server
+                                    Faces - JSF.</a></li>
+                              <li><a href="website_1232_frameworks_java.html" class="no-ch">1.2.3.2.- Frameworks
+                                    Java.</a></li>
+                           </ul>
+                        </li>
+                     </ul>
+                  </li>
+               </ul>
+            </li>
+            <li id="active"><a href="website_2_despliegue_de_aplicaciones_con_tomcat.html" class="active daddy">2.-
+                  Despliegue de aplicaciones con Tomcat</a>
+               <ul>
+                  <li><a href="website_21_estructura_de_ficheros.html" class="no-ch">2.1.- Estructura de ficheros.</a>
+                  </li>
+                  <li><a href="website_22_descriptor_de_despliegue.html" class="no-ch">2.2.- Descriptor de
+                        despliegue.</a></li>
+                  <li><a href="website_23_implementar_el_registro_de_acceso.html" class="no-ch">2.3.- Implementar el
+                        registro de acceso.</a></li>
+                  <li><a href="website_24_sesiones_persistentes.html" class="no-ch">2.4.- Sesiones persistentes.</a>
+                  </li>
+                  <li><a href="website_25_configurar_tomcat_en_cluster.html" class="no-ch">2.5.- Configurar Tomcat en
+                        cluster.</a></li>
+               </ul>
+            </li>
+            <li><a href="website_3_el_gestor_de_aplicaciones_web_de_tomcat.html" class="daddy">3.- El gestor de
+                  aplicaciones Web de Tomcat.</a>
+               <ul class="other-section">
+                  <li><a href="website_31_configuracin_del_gestor.html" class="no-ch">3.1.- Configuración del
+                        gestor.</a></li>
+                  <li><a href="website_32_conexin_al_gestor_de_aplicaciones_web_de_tomcat_de_forma_remota.html"
+                        class="no-ch">3.2.- Conexión al gestor de aplicaciones web de Tomcat de forma remota.</a></li>
+               </ul>
+            </li>
+            <li><a href="website_4_el_servidor_de_aplicaciones_wildflyjboss.html" class="daddy">4.- El servidor de
+                  aplicaciones WildFly-JBoss.</a>
+               <ul class="other-section">
+                  <li><a href="website_31_instalacin_y_configuracin_bsica.html" class="no-ch">3.1.- Instalación y
+                        configuración básica.</a></li>
+                  <li><a href="website_32_despliegue_de_aplicaciones_empresariales.html" class="no-ch">3.2.- Despliegue
+                        de aplicaciones empresariales.</a></li>
+                  <li><a href="website_33_estructura_de_carpetas_de_una_aplicacin_empresarial_archivo_ear.html"
+                        class="no-ch">3.3.- Estructura de carpetas de una aplicación empresarial. Archivo EAR.</a></li>
+               </ul>
+            </li>
+            <!--  li><a href="website_anexo_licencias_de_recursos.html" class="no-ch">Anexo.- Licencias de recursos.</a></li -->
+         </ul>
+      </div>
+      <div id='topPagination'>
+         <div class="pagination noprt">
+            <a href="website_1232_frameworks_java.html" class="prev"><span><span>&laquo; </span>Anterior</span></a>
+            <span class="sep">| </span><a href="website_21_estructura_de_ficheros.html"
+               class="next"><span>Siguiente<span> &raquo;</span></span></a>
+         </div>
+      </div>
+      <div id="main-wrapper">
+         <div id="main"><a name="main"></a>
+            <div id="nodeDecoration">
+               <h1 id="nodeTitle">2.- Despliegue de aplicaciones con Tomcat</h1>
+            </div>
+            <div class="iDevice_wrapper FreeTextfpdIdevice" id="id76">
+               <div class="iDevice emphasis0">
+                  <div id="ta76_73" class="block iDevice_content">
+                     <p align="justify">Desplegar una aplicación web desarrollada en Java consiste en situar una serie
+                        de archivos en un contenedor <span lang="en">web</span> para que los clientes puedan acceder a
+                        su funcionalidad; una aplicación <span lang="en">web</span> es un conjunto de <span
+                           lang="en">servlets</span> , páginas <acronym title="HiperText Markup Language."
+                           lang="en">HTML</acronym>, <acronym title="Java Server Pages." lang="en">JSP</acronym>, clases
+                        y otros recursos que se pueden empaquetar de una forma determinada. La carpeta en la que
+                        tendremos que copiar la carpeta con todos los fichero será <strong>$CATALINA_HOME/<span
+                              lang="en">webapps.</span></strong><span lang="en"> En XAMMP la variable de entorno
+                        </span>$CATALINA valdrá:.</p>
+                     <p align="justify">Para ello, necesitamos generar su archivo .WAR.</p>
+                     <p align="justify">Su nombre procede de <span lang="en">Web Application Archive</span> (Archivo de
+                        Aplicación Web) y permiten empaquetar en una sola unidad aplicaciones web de Java completas. Es
+                        decir que su contenido será:</p>
+                     <ul class="lista_verificacion">
+                        <li><span lang="en">Clases, servlets</span> y JSP.</li>
+                        <li>Contenido estático: HTML, imágenes, etc.</li>
+                        <li>Otros recursos web.</li>
+                     </ul>
+                     <p align="justify">Aportan como ventaja, la simplificación del despliegue de aplicaciones web,
+                        debido a que su instalación es sencilla y solamente es necesario un fichero para cada servidor
+                        en un <span lang="en">cluster</span>, además de incrementar la seguridad ya que no permite el
+                        acceso entre aplicaciones web distintas.</p>
+                     <p align="justify">Podríamos generarlos a mano a partir de los fichero del proyecto, pero lo más
+                        recomendable es utilizar alguna de las herramientas disponibles. Podemos usar entorno <acronym
+                           title="Integrated Development Environment">IDE</acronym> "<span lang="en">Integrated
+                           Development Environment</span>" como NetBeans o Eclipse o alguno de los frameworks
+                        comentados. Otro modo de construir archivos war es mediante Ant. Se trata de una herramienta
+                        <span lang="en">Open-Source</span> que facilita la construcción de aplicaciones en Java. No es
+                        considerado un IDE pero para los que conocen el entorno Linux, es considerado el
+                        <code>make</code> de Java.</p>
+                     <p align="justify">Cada aplicación web JEE es un contexto, una unidad que comprende un conjunto de
+                        recursos, clases Java y su configuración. Cuando hablemos de contexto, nos estaremos refiriendo
+                        a la aplicación web en conjunto. Por ello utilizaremos indistintamente los términos
+                        aplicación web y contexto.<br /><br />Cada contexto (aplicación web) instalado en el servidor
+                        tendrá asociado una ruta para acceder a él desde la web. Por ejemplo, podemos asociar nuestro
+                        contexto la ruta /proyecto, de forma que accediendo a la siguiente URL:</p>
+                     <div class="codigo elemento_centrado" style="width: 42.3em;">
+                        <div class="texto_izquierda">
+                           <pre><code>http://localhost:8080/proyecto/index.html</code></pre>
+                        </div>
+                     </div>
+                     <p align="justify"><br />Estaremos leyendo el recurso /index.htm de nuestro contexto.</p>
+                  </div>
+               </div>
+            </div>
+            <div class="iDevice_wrapper SeleccionmultiplefpdIdevice em_iDevice" id="id90">
+               <!-- <div class="iDevice emphasis_autoevaluacionfpd">
+                  <div class="iDevice_header">
+                     <h2 class="iDeviceTitle">Autoevaluación</h2>
+                  </div>
+                  <div class="iDevice_inner">
+                     <div class="iDevice_content_wrapper">
+                        <div class="question">
+                           <div id="actitity-90_55">
+                              <form name="multi-select-form-90_55" action="#" class="activity-form multi-select-form">
+                                 <h3 class="js-sr-av">Pregunta</h3>
+                                 <div id="taquestion90_55" class="block question iDevice_content">
+                                    <p>
+                                       <strong>Un
+                                          archivo .WAR</strong>
+                                    </p>
+
+                                 </div>
+                                 <div class="iDevice_answers">
+                                    <h4 class="js-sr-av">Respuestas</h4>
+                                    <div class="iDevice_answer">
+                                       <p class="iDevice_answer-field js-required">
+                                          <label for="op90_550" class="sr-av"><a href="#answer-90_58">Opción
+                                                1</a></label><input type="checkbox" id="op90_550" value="False" />
+                                       </p>
+                                       <div class="iDevice_answer-content" id="answer-90_58"><a name="answer-90_58"></a>
+                                          <div id="taans90_58" class="block iDevice_content">
+                                             <p>
+                                                Es
+                                                un archivo comprimido que se puede generar con cualquier tipo de
+                                                compresor, por ejemplo winzip, winrar, tar, etc.
+                                             </p>
+
+                                          </div>
+                                       </div>
+                                       <div class="iDevice_answer-feedback feedback" id="feedback-90_550"
+                                          style="display:none"></div>
+                                    </div>
+                                    <div class="iDevice_answer">
+                                       <p class="iDevice_answer-field js-required">
+                                          <label for="op90_551" class="sr-av"><a href="#answer-90_125">Opción
+                                                2</a></label><input type="checkbox" id="op90_551" value="False" />
+                                       </p>
+                                       <div class="iDevice_answer-content" id="answer-90_125"><a
+                                             name="answer-90_125"></a>
+                                          <div id="taans90_125" class="block iDevice_content">
+                                             <p>
+                                                Es
+                                                una aplicación web formada únicamente por archivos .html
+                                             </p>
+
+                                          </div>
+                                       </div>
+                                       <div class="iDevice_answer-feedback feedback" id="feedback-90_551"
+                                          style="display:none"></div>
+                                    </div>
+                                    <div class="iDevice_answer">
+                                       <p class="iDevice_answer-field js-required">
+                                          <label for="op90_552" class="sr-av"><a href="#answer-90_127">Opción
+                                                3</a></label><input type="checkbox" id="op90_552" value="True" />
+                                       </p>
+                                       <div class="iDevice_answer-content" id="answer-90_127"><a
+                                             name="answer-90_127"></a>
+                                          <div id="taans90_127" class="block iDevice_content">
+                                             <p>
+                                                Es
+                                                un archivo en el cual se
+                                                empaqueta en una sola unidad, aplicaciones web completas.
+                                             </p>
+
+                                          </div>
+                                       </div>
+                                       <div class="iDevice_answer-feedback feedback" id="feedback-90_552"
+                                          style="display:none"></div>
+                                    </div>
+                                    <div class="iDevice_answer">
+                                       <p class="iDevice_answer-field js-required">
+                                          <label for="op90_553" class="sr-av"><a href="#answer-90_129">Opción
+                                                4</a></label><input type="checkbox" id="op90_553" value="False" />
+                                       </p>
+                                       <div class="iDevice_answer-content" id="answer-90_129"><a
+                                             name="answer-90_129"></a>
+                                          <div id="taans90_129" class="block iDevice_content">
+                                             <p>
+                                                Es
+                                                un archivo que
+                                                engloba el protocolo de comunicación de las aplicaciones web
+                                                generadas con Java.
+                                             </p>
+
+                                          </div>
+                                       </div>
+                                       <div class="iDevice_answer-feedback feedback" id="feedback-90_553"
+                                          style="display:none"></div>
+                                    </div>
+                                 </div>
+                                 <div class="block iDevice_buttons feedback-button js-required">
+                                    <p>
+                                       <input type="button" name="submitSelect"
+                                          class="feedbackbutton multi-select-feedback-toggler"
+                                          value="Mostrar retroalimentación"
+                                          id="multi-select-feedback-toggler-4-90_55" />
+                                    </p>
+                                 </div>
+                                 <div id="f90_55" class="js-hidden js-feedback">
+                                    <h4 class="js-sr-av">Retroalimentación</h4>
+
+                                    <div id="tafeedback90_55" class="feedback iDevice_content">
+                                       <p>
+                                          La opción correcta es la tercera. Su
+                                          nombre procede de <span lang="en">Web Application Archive</span> (Archivo
+                                          de Aplicación Web); permiten empaquetar en una sola unidad
+                                          aplicaciones web de Java completas.
+                                       </p>
+
+                                    </div>
+                                 </div>
+                              </form>
+                              <div class="iDevice_solution feedback js-hidden">
+                                 <h4>Solución</h4>
+                                 <ol>
+                                    <li><a href="#answer-90_58" class="wrong">Incorrecto</a></li>
+                                    <li><a href="#answer-90_125" class="wrong">Incorrecto</a></li>
+                                    <li><a href="#answer-90_127" class="right">Correcto</a></li>
+                                    <li><a href="#answer-90_129" class="wrong">Incorrecto</a></li>
+                                 </ol>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div> -->
+            </div>
+         </div>
+      </div>
+      <div id='bottomPagination'>
+         <div class="pagination noprt">
+            <a href="website_1232_frameworks_java.html" class="prev"><span><span>&laquo; </span>Anterior</span></a>
+            <span class="sep">| </span><a href="website_21_estructura_de_ficheros.html"
+               class="next"><span>Siguiente<span> &raquo;</span></span></a>
+         </div>
+      </div>
+   </div>
+   <script type="text/javascript" src="venobox.min.js.pagespeed.jm.gjW24KJanc.js"></script>
+   <script>$(document).ready(function () { $('.venobox').venobox({ titleattr: 'data-title' }); });</script>
+</body>
+
+</html>

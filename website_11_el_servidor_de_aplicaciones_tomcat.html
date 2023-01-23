@@ -1,0 +1,313 @@
+<!DOCTYPE html
+   PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="es" xml:lang="es" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+   <style>
+      @import url(https://ikastaroak.ulhi.net/edu/style/ULHI22/base.css);
+   </style>
+   <link rel="stylesheet" type="text/css" href="A.content.css.pagespeed.cf.iOubMBlGNH.css" />
+   <style>
+      @import url(https://ikastaroak.ulhi.net/edu/style/ULHI22/nav.css);
+   </style>
+   <meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+   <title>1.1.- El servidor de aplicaciones Tomcat. | Despliegue de aplicaciones web Java. </title>
+   <link rel="shortcut icon" href="./image/favicon.ico" type="image/x-icon" />
+   <meta http-equiv="content-language" content="es" />
+   <meta name="generator" content="eXeLearning 2.2 - exelearning.net" />
+   <script type="text/javascript" src="exe_jquery.js.pagespeed.jm.roLDJ9nOeu.js"></script>
+   <script src="common_i18n.js+common.js.pagespeed.jc.y5nduQJzlB.js"></script>
+   <script>eval(mod_pagespeed_hIROIhtvDX);</script>
+   <script>eval(mod_pagespeed_jj85KjL_7$);</script>
+   <meta name="viewport" content="width=device-width, initial-scale=1" />
+   <script
+      type="text/javascript">var path = "my_js.js"; if (document.domain == "ikastaroak.ulhi.net" || document.domain == "ikastaroakpre.ulhi.net") path = "https://ikastaroak.ulhi.net/edu/style/ULHI22/my_js.js"; document.write(unescape("%3Cscript src=\'" + path + "\'type=\'text/javascript\'%3E%3C/script%3E"));</script>
+</head>
+
+<body class="exe-web-site" id="exe-node-23">
+   <script type="text/javascript">document.body.className += " js"</script>
+   <div id="content">
+      <p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+      <div id="header">
+         <div id="headerContent">Despliegue de aplicaciones web Java.</div>
+      </div>
+      <div id="siteNav">
+         <ul>
+            <li><a href="website_index.html" class="daddy main-node">Despliegue de aplicaciones web Java.</a></li>
+            <li class="current-page-parent"><a href="website_1_aplicaciones_web_y_servidores_de_aplicaciones.html"
+                  class="current-page-parent daddy">1.- Aplicaciones web y servidores de aplicaciones.</a>
+               <ul>
+                  <li id="active"><a href="website_11_el_servidor_de_aplicaciones_tomcat.html"
+                        class="active daddy">1.1.- El servidor de aplicaciones Tomcat.</a>
+                     <ul>
+                        <li><a href="website_111_instalacin_y_configuracin_bsica.html" class="daddy">1.1.1.-
+                              Instalación y configuración básica.</a>
+                           <ul class="other-section">
+                              <li><a href="website_1111_instalacin_manual_en_linux.html" class="no-ch">1.1.1.1.-
+                                    Instalación manual en Linux.</a></li>
+                              <li><a href="website_1112_integracin_con_apache.html" class="no-ch">1.1.1.2.- Integración
+                                    con Apache.</a></li>
+                           </ul>
+                        </li>
+                        <li><a href="website_112_proteccin_del_servidor_de_aplicaciones.html" class="no-ch">1.1.2.-
+                              Protección del servidor de aplicaciones.</a></li>
+                     </ul>
+                  </li>
+                  <li><a href="website_12_aplicaciones_web_java_ee.html" class="daddy">1.2.- Aplicaciones web Java
+                        EE.</a>
+                     <ul class="other-section">
+                        <li><a href="website_121_servlets.html" class="daddy">1.2.1.- Servlets.</a>
+                           <ul class="other-section">
+                              <li><a href="website_1211_llamada_a_servlets.html" class="no-ch">1.2.1.1.- Llamada a
+                                    servlets.</a></li>
+                              <li><a href="website_1212_ejemplo.html" class="no-ch">1.2.1.2.- Ejemplo.</a></li>
+                           </ul>
+                        </li>
+                        <li><a href="website_122_java_server_pages__jsp.html" class="daddy">1.2.2.- Java Server Pages -
+                              JSP.</a>
+                           <ul class="other-section">
+                              <li><a href="website_1221_scripts_jsp.html" class="no-ch">1.2.2.1.- Scripts JSP.</a></li>
+                              <li><a href="website_1222_incluir_un_jsp_dentro_de_otro.html" class="no-ch">1.2.2.2.-
+                                    Incluir un JSP dentro de otro.</a></li>
+                           </ul>
+                        </li>
+                        <li><a href="website_123_arquitectura_mvc.html" class="daddy">1.2.3.- Arquitectura MVC.</a>
+                           <ul class="other-section">
+                              <li><a href="website_1231_java_server_faces__jsf.html" class="no-ch">1.2.3.1.- Java Server
+                                    Faces - JSF.</a></li>
+                              <li><a href="website_1232_frameworks_java.html" class="no-ch">1.2.3.2.- Frameworks
+                                    Java.</a></li>
+                           </ul>
+                        </li>
+                     </ul>
+                  </li>
+               </ul>
+            </li>
+            <li><a href="website_2_despliegue_de_aplicaciones_con_tomcat.html" class="daddy">2.- Despliegue de
+                  aplicaciones con Tomcat</a>
+               <ul class="other-section">
+                  <li><a href="website_21_estructura_de_ficheros.html" class="no-ch">2.1.- Estructura de ficheros.</a>
+                  </li>
+                  <li><a href="website_22_descriptor_de_despliegue.html" class="no-ch">2.2.- Descriptor de
+                        despliegue.</a></li>
+                  <li><a href="website_23_implementar_el_registro_de_acceso.html" class="no-ch">2.3.- Implementar el
+                        registro de acceso.</a></li>
+                  <li><a href="website_24_sesiones_persistentes.html" class="no-ch">2.4.- Sesiones persistentes.</a>
+                  </li>
+                  <li><a href="website_25_configurar_tomcat_en_cluster.html" class="no-ch">2.5.- Configurar Tomcat en
+                        cluster.</a></li>
+               </ul>
+            </li>
+            <li><a href="website_3_el_gestor_de_aplicaciones_web_de_tomcat.html" class="daddy">3.- El gestor de
+                  aplicaciones Web de Tomcat.</a>
+               <ul class="other-section">
+                  <li><a href="website_31_configuracin_del_gestor.html" class="no-ch">3.1.- Configuración del
+                        gestor.</a></li>
+                  <li><a href="website_32_conexin_al_gestor_de_aplicaciones_web_de_tomcat_de_forma_remota.html"
+                        class="no-ch">3.2.- Conexión al gestor de aplicaciones web de Tomcat de forma remota.</a></li>
+               </ul>
+            </li>
+            <li><a href="website_4_el_servidor_de_aplicaciones_wildflyjboss.html" class="daddy">4.- El servidor de
+                  aplicaciones WildFly-JBoss.</a>
+               <ul class="other-section">
+                  <li><a href="website_31_instalacin_y_configuracin_bsica.html" class="no-ch">3.1.- Instalación y
+                        configuración básica.</a></li>
+                  <li><a href="website_32_despliegue_de_aplicaciones_empresariales.html" class="no-ch">3.2.- Despliegue
+                        de aplicaciones empresariales.</a></li>
+                  <li><a href="website_33_estructura_de_carpetas_de_una_aplicacin_empresarial_archivo_ear.html"
+                        class="no-ch">3.3.- Estructura de carpetas de una aplicación empresarial. Archivo EAR.</a></li>
+               </ul>
+            </li>
+            <!--  li><a href="website_anexo_licencias_de_recursos.html" class="no-ch">Anexo.- Licencias de recursos.</a></li -->
+         </ul>
+      </div>
+      <div id='topPagination'>
+         <div class="pagination noprt">
+            <a href="website_1_aplicaciones_web_y_servidores_de_aplicaciones.html" class="prev"><span><span>&laquo;
+                  </span>Anterior</span></a> <span class="sep">| </span><a
+               href="website_111_instalacin_y_configuracin_bsica.html" class="next"><span>Siguiente<span>
+                     &raquo;</span></span></a>
+         </div>
+      </div>
+      <div id="main-wrapper">
+         <div id="main"><a name="main"></a>
+            <div id="nodeDecoration">
+               <h1 id="nodeTitle">1.1.- El servidor de aplicaciones Tomcat.</h1>
+            </div>
+            <div class="iDevice_wrapper CasopracticofpdIdevice em_iDevice" id="id65">
+               <div class="iDevice emphasis_casopracticofpd">
+                  <div class="iDevice_header">
+                     <h2 class="iDeviceTitle">Caso práctico</h2>
+                  </div>
+                  <div class="iDevice_inner">
+                     <div class="iDevice_content_wrapper">
+                        <div id="ta65_66" class="block iDevice_content">
+                           <p align="justify">
+                              Instalar un servidor de
+                              aplicaciones web para la empresa <strong>BK programación </strong>ha
+                              sido una solicitud que Ada había propuesto hace tiempo a María,
+                              quien, llegado el momento, y habiendo estudiado las posibles
+                              opciones, se ha decidido por instalar el servidor Tomcat
+                           </p>
+                           <script data-pagespeed-no-defer type="text/javascript">//<![CDATA[
+                                 (function () { for (var g = "function" == typeof Object.defineProperties ? Object.defineProperty : function (b, c, a) { if (a.get || a.set) throw new TypeError("ES3 does not support getters and setters."); b != Array.prototype && b != Object.prototype && (b[c] = a.value) }, h = "undefined" != typeof window && window === this ? this : "undefined" != typeof global && null != global ? global : this, k = ["String", "prototype", "repeat"], l = 0; l < k.length - 1; l++) { var m = k[l]; m in h || (h[m] = {}); h = h[m] } var n = k[k.length - 1], p = h[n], q = p ? p : function (b) { var c; if (null == this) throw new TypeError("The 'this' value for String.prototype.repeat must not be null or undefined"); c = this + ""; if (0 > b || 1342177279 < b) throw new RangeError("Invalid count value"); b |= 0; for (var a = ""; b;)if (b & 1 && (a += c), b >>>= 1) c += c; return a }; q != p && null != q && g(h, n, { configurable: !0, writable: !0, value: q }); var t = this; function u(b, c) { var a = b.split("."), d = t; a[0] in d || !d.execScript || d.execScript("var " + a[0]); for (var e; a.length && (e = a.shift());)a.length || void 0 === c ? d[e] ? d = d[e] : d = d[e] = {} : d[e] = c }; function v(b) { var c = b.length; if (0 < c) { for (var a = Array(c), d = 0; d < c; d++)a[d] = b[d]; return a } return [] }; function w(b) { var c = window; if (c.addEventListener) c.addEventListener("load", b, !1); else if (c.attachEvent) c.attachEvent("onload", b); else { var a = c.onload; c.onload = function () { b.call(this); a && a.call(this) } } }; var x; function y(b, c, a, d, e) { this.h = b; this.j = c; this.l = a; this.f = e; this.g = { height: window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight, width: window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth }; this.i = d; this.b = {}; this.a = []; this.c = {} } function z(b, c) { var a, d, e = c.getAttribute("data-pagespeed-url-hash"); if (a = e && !(e in b.c)) if (0 >= c.offsetWidth && 0 >= c.offsetHeight) a = !1; else { d = c.getBoundingClientRect(); var f = document.body; a = d.top + ("pageYOffset" in window ? window.pageYOffset : (document.documentElement || f.parentNode || f).scrollTop); d = d.left + ("pageXOffset" in window ? window.pageXOffset : (document.documentElement || f.parentNode || f).scrollLeft); f = a.toString() + "," + d; b.b.hasOwnProperty(f) ? a = !1 : (b.b[f] = !0, a = a <= b.g.height && d <= b.g.width) } a && (b.a.push(e), b.c[e] = !0) } y.prototype.checkImageForCriticality = function (b) { b.getBoundingClientRect && z(this, b) }; u("pagespeed.CriticalImages.checkImageForCriticality", function (b) { x.checkImageForCriticality(b) }); u("pagespeed.CriticalImages.checkCriticalImages", function () { A(x) }); function A(b) { b.b = {}; for (var c = ["IMG", "INPUT"], a = [], d = 0; d < c.length; ++d)a = a.concat(v(document.getElementsByTagName(c[d]))); if (a.length && a[0].getBoundingClientRect) { for (d = 0; c = a[d]; ++d)z(b, c); a = "oh=" + b.l; b.f && (a += "&n=" + b.f); if (c = !!b.a.length) for (a += "&ci=" + encodeURIComponent(b.a[0]), d = 1; d < b.a.length; ++d) { var e = "," + encodeURIComponent(b.a[d]); 131072 >= a.length + e.length && (a += e) } b.i && (e = "&rd=" + encodeURIComponent(JSON.stringify(B())), 131072 >= a.length + e.length && (a += e), c = !0); C = a; if (c) { d = b.h; b = b.j; var f; if (window.XMLHttpRequest) f = new XMLHttpRequest; else if (window.ActiveXObject) try { f = new ActiveXObject("Msxml2.XMLHTTP") } catch (r) { try { f = new ActiveXObject("Microsoft.XMLHTTP") } catch (D) { } } f && (f.open("POST", d + (-1 == d.indexOf("?") ? "?" : "&") + "url=" + encodeURIComponent(b)), f.setRequestHeader("Content-Type", "application/x-www-form-urlencoded"), f.send(a)) } } } function B() { var b = {}, c; c = document.getElementsByTagName("IMG"); if (!c.length) return {}; var a = c[0]; if (!("naturalWidth" in a && "naturalHeight" in a)) return {}; for (var d = 0; a = c[d]; ++d) { var e = a.getAttribute("data-pagespeed-url-hash"); e && (!(e in b) && 0 < a.width && 0 < a.height && 0 < a.naturalWidth && 0 < a.naturalHeight || e in b && a.width >= b[e].o && a.height >= b[e].m) && (b[e] = { rw: a.width, rh: a.height, ow: a.naturalWidth, oh: a.naturalHeight }) } return b } var C = ""; u("pagespeed.CriticalImages.getBeaconData", function () { return C }); u("pagespeed.CriticalImages.Run", function (b, c, a, d, e, f) { var r = new y(b, c, a, e, f); x = r; d && w(function () { window.setTimeout(function () { A(r) }, 0) }) }); })(); pagespeed.CriticalImages.Run('/mod_pagespeed_beacon', 'http://ikastaroak.birt.eus/edu/argitalpen/backupa/20200331/1920k/es/DAW/DEAW/DEAW05/es_DAW_DEAW05_Contenidos/website_11_el_servidor_de_aplicaciones_tomcat.html', 'nXzXivl0t7', true, false, 'efsB1Sfq72s');
+//]]></script><img alt="Logo servidor Tomcat" class="elemento_centrado" height="148"
+                              src="xDAW01_CONT_R21_logo_Tomcat.jpg.pagespeed.ic._t2EEfgJz7.jpg"
+                              style="width: 200px; height: 148px" title="Logo Tomcat" width="200"
+                              data-pagespeed-url-hash="2264920303"
+                              onload="pagespeed.CriticalImages.checkImageForCriticality(this);" />
+
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="iDevice_wrapper FreeTextfpdIdevice" id="id66">
+               <div class="iDevice emphasis0">
+                  <div id="ta66_73" class="block iDevice_content">
+                     <p>En el caso de aplicaciones Java EE, en el lado del servidor, necesitamos un equipo que dé
+                        soporte a la arquitectura Java EE. Típicamente los servidores de aplicaciones Java EE son
+                        servidores potentes, que abarcan todo el potencial de funcionalidades que ofrece la plataforma
+                        Java EE. Sin embargo estos servidores son pesados (ocupan mucho espacio en disco y memoria), y
+                        requieren de máquinas relativamente potentes y dedicadas para su correcto funcionamiento.</p>
+                     <p>En el caso de no necesitar toda la plataforma, sino su núcleo básico, podemos "conformarnos"
+                        con un servidor web con soporte para Java EE. Estos servidores lógicamente no disponen de todas
+                        las funcionalidades de un gran servidor de aplicaciones, pero nos permiten cargar aplicaciones
+                        web más ligeras, consumiendo menos recursos y siendo más fácilmente mantenibles.</p>
+                     <p align="justify">El servidor que se suele emplear para estos primeros pasos, o estas aplicaciones
+                        ligeras con Java EE es Tomcat. Es un servidor Java EE desarrollado por el proyecto Jakarta (los
+                        mismos desarrolladores que el servidor Apache), y proporciona diferentes funcionalidades para
+                        desarrollar aplicaciones Java EE basadas en servlets, páginas JSP, struts, y otras librerías
+                        que son un estándar en el desarrollo de aplicaciones Java EE.</p>
+                     <p align="justify">Tomcat es un contenedor web con soporte de servlets y JSPs. Tomcat no es un
+                        servidor de aplicaciones, como JBoss o JOnAS. Incluye el compilador Jasper, que compila JSPs
+                        convirtiéndolas en servlets. El motor de servlets de Tomcat a menudo se presenta en
+                        combinación con el servidor web Apache.</p>
+                     <p align="justify">Tomcat puede funcionar como servidor web por sí mismo. En sus inicios existió
+                        la percepción de que el uso de Tomcat de forma autónoma era sólo recomendable para entornos
+                        de desarrollo y entornos con requisitos mínimos de velocidad y gestión de transacciones. Hoy
+                        en día ya no existe esa percepción y Tomcat es usado como servidor web autónomo en entornos
+                        con alto nivel de tráfico y alta disponibilidad.</p>
+                     <p align="justify">Dado que Tomcat fue escrito en Java, funciona en cualquier sistema operativo que
+                        disponga de la máquina virtual Java.</p>
+                  </div>
+               </div>
+            </div>
+            <div class="iDevice_wrapper EleccionmultiplefpdIdevice em_iDevice" id="id67">
+               <!-- <div class="iDevice emphasis_autoevaluacionfpd">
+                  <div class="iDevice_header">
+                     <h2 class="iDeviceTitle">Autoevaluación</h2>
+                  </div>
+                  <div class="iDevice_inner">
+                     <div class="iDevice_content_wrapper">
+                        <div class="question">
+                           <form name="multi-choice-form-67_60" action="#" onsubmit="return false"
+                              class="activity-form">
+                              <h3 class="js-sr-av">Pregunta</h3>
+                              <div id="taquestion67_60" class="block question iDevice_content">
+                                 <p>
+                                    <strong>Las
+                                       funciones del Servidor Apache y las funciones del servidor Tomcat,
+                                       ¿son equivalentes?</strong>
+                                 </p>
+
+                              </div>
+                              <div class="iDevice_answers">
+                                 <h4 class="js-sr-av">Respuestas</h4>
+                                 <div class="iDevice_answer">
+                                    <p class="iDevice_answer-field js-required">
+                                       <label for="i67_63" class="sr-av"><a href="#answer-67_63">Opción
+                                             1</a></label><input type="radio" name="option67_60" id="i67_63"
+                                          class="exe-radio-option exe-radio-option-0-2-67_60-multi" />
+                                    </p>
+                                    <div class="iDevice_answer-content" id="answer-67_63"><a name="answer-67_63"></a>
+                                       <div id="taans67_63" class="block iDevice_content">
+                                          Sí.
+
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="iDevice_answer">
+                                    <p class="iDevice_answer-field js-required">
+                                       <label for="i67_113" class="sr-av"><a href="#answer-67_113">Opción
+                                             2</a></label><input type="radio" name="option67_60" id="i67_113"
+                                          class="exe-radio-option exe-radio-option-1-2-67_60-multi" />
+                                    </p>
+                                    <div class="iDevice_answer-content" id="answer-67_113"><a name="answer-67_113"></a>
+                                       <div id="taans67_113" class="block iDevice_content">
+                                          No.
+
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="iDevice_feedbacks js-feedback">
+                                 <h4 class="js-sr-av">Retroalimentación</h4>
+                                 <div id="sa0b67_60" class="feedback js-hidden"><a name="sa0b67_60"></a>
+                                    <div id="taf67_63" class=" iDevice_content">
+                                       <p>
+                                          Recopila
+                                          y analiza documentación relativa a cada uno de los servidores.
+                                       </p>
+
+                                    </div>
+                                 </div>
+                                 <div id="sa1b67_60" class="feedback js-hidden"><a name="sa1b67_60"></a>
+                                    <div id="taf67_113" class=" iDevice_content">
+                                       <p>
+                                          Básicamente,
+                                          el servidor Apache es únicamente un servidor web, mientras que el
+                                          servidor Tomcat es un servidor de aplicaciones.
+                                       </p>
+
+                                    </div>
+                                 </div>
+                              </div>
+                           </form>
+                           <div class="iDevice_solution feedback js-hidden">
+                              <h4>Solución</h4>
+                              <ol>
+                                 <li><a href="#answer-67_63">Incorrecto</a><span> (<a
+                                          href="#sa0b67_60">Retroalimentación</a>)</span></li>
+                                 <li><a href="#answer-67_113">Opción correcta</a><span> (<a
+                                          href="#sa1b67_60">Retroalimentación</a>)</span></li>
+                              </ol>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div> -->
+            </div>
+            <div class="iDevice_wrapper DebesconocerfpdIdevice em_iDevice" id="id50">
+               <div class="iDevice emphasis_debesconocerfpd">
+                  <div class="iDevice_header">
+                     <h2 class="iDeviceTitle">Debes conocer</h2>
+                  </div>
+                  <div class="iDevice_inner">
+                     <div class="iDevice_content_wrapper">
+                        <div id="ta50_129" class="block iDevice_content">
+                           <p>La página donde encontrar las últimas versiones y documentación sobre su funcionamiento
+                              y configuración es:</p>
+                           <p style="text-align: center;"><br /><a href="http://tomcat.apache.org/" target="_blank"
+                                 class="html">Tomcat</a></p>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div id='bottomPagination'>
+         <div class="pagination noprt">
+            <a href="website_1_aplicaciones_web_y_servidores_de_aplicaciones.html" class="prev"><span><span>&laquo;
+                  </span>Anterior</span></a> <span class="sep">| </span><a
+               href="website_111_instalacin_y_configuracin_bsica.html" class="next"><span>Siguiente<span>
+                     &raquo;</span></span></a>
+         </div>
+      </div>
+   </div>
+   <script type="text/javascript" src="venobox.min.js.pagespeed.jm.gjW24KJanc.js"></script>
+   <script>$(document).ready(function () { $('.venobox').venobox({ titleattr: 'data-title' }); });</script>
+</body>
+
+</html>

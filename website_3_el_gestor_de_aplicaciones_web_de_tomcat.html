@@ -1,0 +1,228 @@
+<!DOCTYPE html
+   PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="es" xml:lang="es" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+   <style>
+      @import url(https://ikastaroak.ulhi.net/edu/style/ULHI22/base.css);
+   </style>
+   <link rel="stylesheet" type="text/css" href="A.content.css.pagespeed.cf.iOubMBlGNH.css" />
+   <style>
+      @import url(https://ikastaroak.ulhi.net/edu/style/ULHI22/nav.css);
+   </style>
+   <meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+   <title>3.- El gestor de aplicaciones Web de Tomcat. | Despliegue de aplicaciones web Java. </title>
+   <link rel="shortcut icon" href="./image/favicon.ico" type="image/x-icon" />
+   <meta http-equiv="content-language" content="es" />
+   <meta name="generator" content="eXeLearning 2.2 - exelearning.net" />
+   <script type="text/javascript" src="exe_jquery.js.pagespeed.jm.roLDJ9nOeu.js"></script>
+   <script src="common_i18n.js+common.js.pagespeed.jc.y5nduQJzlB.js"></script>
+   <script>eval(mod_pagespeed_hIROIhtvDX);</script>
+   <script>eval(mod_pagespeed_jj85KjL_7$);</script>
+   <meta name="viewport" content="width=device-width, initial-scale=1" />
+   <script
+      type="text/javascript">var path = "my_js.js"; if (document.domain == "ikastaroak.ulhi.net" || document.domain == "ikastaroakpre.ulhi.net") path = "https://ikastaroak.ulhi.net/edu/style/ULHI22/my_js.js"; document.write(unescape("%3Cscript src=\'" + path + "\'type=\'text/javascript\'%3E%3C/script%3E"));</script>
+</head>
+
+<body class="exe-web-site" id="exe-node-17">
+   <script type="text/javascript">document.body.className += " js"</script>
+   <div id="content">
+      <p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+      <div id="header">
+         <div id="headerContent">Despliegue de aplicaciones web Java.</div>
+      </div>
+      <div id="siteNav">
+         <ul>
+            <li><a href="website_index.html" class="daddy main-node">Despliegue de aplicaciones web Java.</a></li>
+            <li><a href="website_1_aplicaciones_web_y_servidores_de_aplicaciones.html" class="daddy">1.- Aplicaciones
+                  web y servidores de aplicaciones.</a>
+               <ul class="other-section">
+                  <li><a href="website_11_el_servidor_de_aplicaciones_tomcat.html" class="daddy">1.1.- El servidor de
+                        aplicaciones Tomcat.</a>
+                     <ul class="other-section">
+                        <li><a href="website_111_instalacin_y_configuracin_bsica.html" class="daddy">1.1.1.-
+                              Instalación y configuración básica.</a>
+                           <ul class="other-section">
+                              <li><a href="website_1111_instalacin_manual_en_linux.html" class="no-ch">1.1.1.1.-
+                                    Instalación manual en Linux.</a></li>
+                              <li><a href="website_1112_integracin_con_apache.html" class="no-ch">1.1.1.2.- Integración
+                                    con Apache.</a></li>
+                           </ul>
+                        </li>
+                        <li><a href="website_112_proteccin_del_servidor_de_aplicaciones.html" class="no-ch">1.1.2.-
+                              Protección del servidor de aplicaciones.</a></li>
+                     </ul>
+                  </li>
+                  <li><a href="website_12_aplicaciones_web_java_ee.html" class="daddy">1.2.- Aplicaciones web Java
+                        EE.</a>
+                     <ul class="other-section">
+                        <li><a href="website_121_servlets.html" class="daddy">1.2.1.- Servlets.</a>
+                           <ul class="other-section">
+                              <li><a href="website_1211_llamada_a_servlets.html" class="no-ch">1.2.1.1.- Llamada a
+                                    servlets.</a></li>
+                              <li><a href="website_1212_ejemplo.html" class="no-ch">1.2.1.2.- Ejemplo.</a></li>
+                           </ul>
+                        </li>
+                        <li><a href="website_122_java_server_pages__jsp.html" class="daddy">1.2.2.- Java Server Pages -
+                              JSP.</a>
+                           <ul class="other-section">
+                              <li><a href="website_1221_scripts_jsp.html" class="no-ch">1.2.2.1.- Scripts JSP.</a></li>
+                              <li><a href="website_1222_incluir_un_jsp_dentro_de_otro.html" class="no-ch">1.2.2.2.-
+                                    Incluir un JSP dentro de otro.</a></li>
+                           </ul>
+                        </li>
+                        <li><a href="website_123_arquitectura_mvc.html" class="daddy">1.2.3.- Arquitectura MVC.</a>
+                           <ul class="other-section">
+                              <li><a href="website_1231_java_server_faces__jsf.html" class="no-ch">1.2.3.1.- Java Server
+                                    Faces - JSF.</a></li>
+                              <li><a href="website_1232_frameworks_java.html" class="no-ch">1.2.3.2.- Frameworks
+                                    Java.</a></li>
+                           </ul>
+                        </li>
+                     </ul>
+                  </li>
+               </ul>
+            </li>
+            <li><a href="website_2_despliegue_de_aplicaciones_con_tomcat.html" class="daddy">2.- Despliegue de
+                  aplicaciones con Tomcat</a>
+               <ul class="other-section">
+                  <li><a href="website_21_estructura_de_ficheros.html" class="no-ch">2.1.- Estructura de ficheros.</a>
+                  </li>
+                  <li><a href="website_22_descriptor_de_despliegue.html" class="no-ch">2.2.- Descriptor de
+                        despliegue.</a></li>
+                  <li><a href="website_23_implementar_el_registro_de_acceso.html" class="no-ch">2.3.- Implementar el
+                        registro de acceso.</a></li>
+                  <li><a href="website_24_sesiones_persistentes.html" class="no-ch">2.4.- Sesiones persistentes.</a>
+                  </li>
+                  <li><a href="website_25_configurar_tomcat_en_cluster.html" class="no-ch">2.5.- Configurar Tomcat en
+                        cluster.</a></li>
+               </ul>
+            </li>
+            <li id="active"><a href="website_3_el_gestor_de_aplicaciones_web_de_tomcat.html" class="active daddy">3.- El
+                  gestor de aplicaciones Web de Tomcat.</a>
+               <ul>
+                  <li><a href="website_31_configuracin_del_gestor.html" class="no-ch">3.1.- Configuración del
+                        gestor.</a></li>
+                  <li><a href="website_32_conexin_al_gestor_de_aplicaciones_web_de_tomcat_de_forma_remota.html"
+                        class="no-ch">3.2.- Conexión al gestor de aplicaciones web de Tomcat de forma remota.</a></li>
+               </ul>
+            </li>
+            <li><a href="website_4_el_servidor_de_aplicaciones_wildflyjboss.html" class="daddy">4.- El servidor de
+                  aplicaciones WildFly-JBoss.</a>
+               <ul class="other-section">
+                  <li><a href="website_31_instalacin_y_configuracin_bsica.html" class="no-ch">3.1.- Instalación y
+                        configuración básica.</a></li>
+                  <li><a href="website_32_despliegue_de_aplicaciones_empresariales.html" class="no-ch">3.2.- Despliegue
+                        de aplicaciones empresariales.</a></li>
+                  <li><a href="website_33_estructura_de_carpetas_de_una_aplicacin_empresarial_archivo_ear.html"
+                        class="no-ch">3.3.- Estructura de carpetas de una aplicación empresarial. Archivo EAR.</a></li>
+               </ul>
+            </li>
+            <!--  li><a href="website_anexo_licencias_de_recursos.html" class="no-ch">Anexo.- Licencias de recursos.</a></li -->
+         </ul>
+      </div>
+      <div id='topPagination'>
+         <div class="pagination noprt">
+            <a href="website_25_configurar_tomcat_en_cluster.html" class="prev"><span><span>&laquo;
+                  </span>Anterior</span></a> <span class="sep">| </span><a
+               href="website_31_configuracin_del_gestor.html" class="next"><span>Siguiente<span>
+                     &raquo;</span></span></a>
+         </div>
+      </div>
+      <div id="main-wrapper">
+         <div id="main"><a name="main"></a>
+            <div id="nodeDecoration">
+               <h1 id="nodeTitle">3.- El gestor de aplicaciones Web de Tomcat.</h1>
+            </div>
+            <div class="iDevice_wrapper CasopracticofpdIdevice em_iDevice" id="id39">
+               <div class="iDevice emphasis_casopracticofpd">
+                  <div class="iDevice_header">
+                     <h2 class="iDeviceTitle">Caso práctico</h2>
+                  </div>
+                  <div class="iDevice_inner">
+                     <div class="iDevice_content_wrapper">
+                        <div id="ta39_66" class="block iDevice_content">
+                           <script data-pagespeed-no-defer type="text/javascript">//<![CDATA[
+                                 (function () { for (var g = "function" == typeof Object.defineProperties ? Object.defineProperty : function (b, c, a) { if (a.get || a.set) throw new TypeError("ES3 does not support getters and setters."); b != Array.prototype && b != Object.prototype && (b[c] = a.value) }, h = "undefined" != typeof window && window === this ? this : "undefined" != typeof global && null != global ? global : this, k = ["String", "prototype", "repeat"], l = 0; l < k.length - 1; l++) { var m = k[l]; m in h || (h[m] = {}); h = h[m] } var n = k[k.length - 1], p = h[n], q = p ? p : function (b) { var c; if (null == this) throw new TypeError("The 'this' value for String.prototype.repeat must not be null or undefined"); c = this + ""; if (0 > b || 1342177279 < b) throw new RangeError("Invalid count value"); b |= 0; for (var a = ""; b;)if (b & 1 && (a += c), b >>>= 1) c += c; return a }; q != p && null != q && g(h, n, { configurable: !0, writable: !0, value: q }); var t = this; function u(b, c) { var a = b.split("."), d = t; a[0] in d || !d.execScript || d.execScript("var " + a[0]); for (var e; a.length && (e = a.shift());)a.length || void 0 === c ? d[e] ? d = d[e] : d = d[e] = {} : d[e] = c }; function v(b) { var c = b.length; if (0 < c) { for (var a = Array(c), d = 0; d < c; d++)a[d] = b[d]; return a } return [] }; function w(b) { var c = window; if (c.addEventListener) c.addEventListener("load", b, !1); else if (c.attachEvent) c.attachEvent("onload", b); else { var a = c.onload; c.onload = function () { b.call(this); a && a.call(this) } } }; var x; function y(b, c, a, d, e) { this.h = b; this.j = c; this.l = a; this.f = e; this.g = { height: window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight, width: window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth }; this.i = d; this.b = {}; this.a = []; this.c = {} } function z(b, c) { var a, d, e = c.getAttribute("data-pagespeed-url-hash"); if (a = e && !(e in b.c)) if (0 >= c.offsetWidth && 0 >= c.offsetHeight) a = !1; else { d = c.getBoundingClientRect(); var f = document.body; a = d.top + ("pageYOffset" in window ? window.pageYOffset : (document.documentElement || f.parentNode || f).scrollTop); d = d.left + ("pageXOffset" in window ? window.pageXOffset : (document.documentElement || f.parentNode || f).scrollLeft); f = a.toString() + "," + d; b.b.hasOwnProperty(f) ? a = !1 : (b.b[f] = !0, a = a <= b.g.height && d <= b.g.width) } a && (b.a.push(e), b.c[e] = !0) } y.prototype.checkImageForCriticality = function (b) { b.getBoundingClientRect && z(this, b) }; u("pagespeed.CriticalImages.checkImageForCriticality", function (b) { x.checkImageForCriticality(b) }); u("pagespeed.CriticalImages.checkCriticalImages", function () { A(x) }); function A(b) { b.b = {}; for (var c = ["IMG", "INPUT"], a = [], d = 0; d < c.length; ++d)a = a.concat(v(document.getElementsByTagName(c[d]))); if (a.length && a[0].getBoundingClientRect) { for (d = 0; c = a[d]; ++d)z(b, c); a = "oh=" + b.l; b.f && (a += "&n=" + b.f); if (c = !!b.a.length) for (a += "&ci=" + encodeURIComponent(b.a[0]), d = 1; d < b.a.length; ++d) { var e = "," + encodeURIComponent(b.a[d]); 131072 >= a.length + e.length && (a += e) } b.i && (e = "&rd=" + encodeURIComponent(JSON.stringify(B())), 131072 >= a.length + e.length && (a += e), c = !0); C = a; if (c) { d = b.h; b = b.j; var f; if (window.XMLHttpRequest) f = new XMLHttpRequest; else if (window.ActiveXObject) try { f = new ActiveXObject("Msxml2.XMLHTTP") } catch (r) { try { f = new ActiveXObject("Microsoft.XMLHTTP") } catch (D) { } } f && (f.open("POST", d + (-1 == d.indexOf("?") ? "?" : "&") + "url=" + encodeURIComponent(b)), f.setRequestHeader("Content-Type", "application/x-www-form-urlencoded"), f.send(a)) } } } function B() { var b = {}, c; c = document.getElementsByTagName("IMG"); if (!c.length) return {}; var a = c[0]; if (!("naturalWidth" in a && "naturalHeight" in a)) return {}; for (var d = 0; a = c[d]; ++d) { var e = a.getAttribute("data-pagespeed-url-hash"); e && (!(e in b) && 0 < a.width && 0 < a.height && 0 < a.naturalWidth && 0 < a.naturalHeight || e in b && a.width >= b[e].o && a.height >= b[e].m) && (b[e] = { rw: a.width, rh: a.height, ow: a.naturalWidth, oh: a.naturalHeight }) } return b } var C = ""; u("pagespeed.CriticalImages.getBeaconData", function () { return C }); u("pagespeed.CriticalImages.Run", function (b, c, a, d, e, f) { var r = new y(b, c, a, e, f); x = r; d && w(function () { window.setTimeout(function () { A(r) }, 0) }) }); })(); pagespeed.CriticalImages.Run('/mod_pagespeed_beacon', 'http://ikastaroak.birt.eus/edu/argitalpen/backupa/20200331/1920k/es/DAW/DEAW/DEAW05/es_DAW_DEAW05_Contenidos/website_3_el_gestor_de_aplicaciones_web_de_tomcat.html', 'nXzXivl0t7', true, false, '71N9Md4ATzs');
+//]]></script><img alt="Imagen del gestor Web Tomcat." class="elemento_derecha"
+                              src="data:image/jpeg;base64,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"
+                              style="width: 200px; height: 36px" title="Gestor Web Tomcat."
+                              data-pagespeed-url-hash="3461004323"
+                              onload="pagespeed.CriticalImages.checkImageForCriticality(this);" />
+                           <p>
+                              En la empresa BK programación disponen de un servidor de aplicaciones <span lang="en">web
+                                 Tomcat</span>. Debido a las opciones que éste proporciona han decidido profundizar en
+                              el funcionamiento de éste, pero centrándose en la administración de aplicaciones a
+                              desplegar desde la interfaz <span lang="en">web</span> que <span lang="en">Tomcat</span>
+                              proporciona, el “Gestor de Aplicaciones <span lang="en">Web de Tomcat</span>”.
+                           </p>
+
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="iDevice_wrapper FreeTextfpdIdevice" id="id40">
+               <div class="iDevice emphasis0">
+                  <div id="ta40_73" class="block iDevice_content">
+                     <div class="elemento_derecha">
+                        <div class="elemento_centrado"><a href="DAW03_CONT_R24_listado_aplicaciones_Tomcat.jpg"
+                              title="Ampliar imagen."><img alt="Listado aplicaciones web desde gestor web Tomcat."
+                                 class="imagen_ampliable"
+                                 src="xDAW03_CONT_R24_listado_aplicaciones_Tomcat_miniatura.jpg.pagespeed.ic.7geuhBhzai.jpg"
+                                 style="width: 200px; height: 96px;" title="Listado aplicaciones Web Tomcat."
+                                 width="200" height="96" data-pagespeed-url-hash="141889516"
+                                 onload="pagespeed.CriticalImages.checkImageForCriticality(this);" /></a></div>
+                     </div>
+                     <p>Una vez arrancado en el equipo servidor el <strong lang="en">Tomcat</strong>, desde un navegador
+                        podremos acceder a <span lang="en">Tomcat</span> mediante la <span lang="en">URL</span>:</p>
+                     <ul class="lista_verificacion">
+                        <li>http://localhost:8080 si accedemos desde la propia máquina en la que está corriendo
+                           Tomcat.</li>
+                        <li>http://ip_servidor:8080 si accedemos desde cualquier otra máquina de la red.</li>
+                     </ul>
+                     <p>Mediante el enlace "Tomcat <span lang="en">Manager</span>" accedemos al gestor de aplicaciones
+                        <span lang="en">Web</span> de <span lang="en">Tomcat</span>. Esta página nos va a permitir
+                        desplegar un proyecto contenido en un fichero de extensión <strong>war</strong>.</p>
+                     <p>Vamos al <span lang="en">Tomcat</span> <span lang="en">Manager</span> y allí podremos ver un
+                        listado de las aplicaciones <span lang="en">web</span> que hay disponibles en el servidor. Las
+                        podremos parar, arrancar, eliminar..<span lang="en"></span>. y también hacer seguimiento de las
+                        sesiones.</p>
+                  </div>
+               </div>
+            </div>
+            <div class="iDevice_wrapper ReflectionfpdmodifIdevice em_iDevice" id="id41">
+               <div class="iDevice emphasis_reflexionfpd">
+                  <div class="iDevice_header">
+                     <h2 class="iDeviceTitle">Reflexiona</h2>
+                  </div>
+                  <div class="iDevice_inner">
+                     <div class="iDevice_content_wrapper">
+                        <div id="ta41_40" class="block iDevice_content">
+                           <p>Si estás trabajando como administrador de sistemas en una empresa (supongamos que es
+                              <strong>BK programación</strong>), en la que eres el encargado de administrar, entre
+                              otras, un máquina en la que hay un servidor de aplicaciones <span lang="en">web
+                                 Tomcat</span>.</p>
+                           <p>¿Cómo solicitarías a los desarrolladores de aplicaciones que te enviasen las
+                              aplicaciones a desplegar en dicho servidor?</p>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div id='bottomPagination'>
+         <div class="pagination noprt">
+            <a href="website_25_configurar_tomcat_en_cluster.html" class="prev"><span><span>&laquo;
+                  </span>Anterior</span></a> <span class="sep">| </span><a
+               href="website_31_configuracin_del_gestor.html" class="next"><span>Siguiente<span>
+                     &raquo;</span></span></a>
+         </div>
+      </div>
+   </div>
+   <script type="text/javascript" src="venobox.min.js.pagespeed.jm.gjW24KJanc.js"></script>
+   <script>$(document).ready(function () { $('.venobox').venobox({ titleattr: 'data-title' }); });</script>
+</body>
+
+</html>

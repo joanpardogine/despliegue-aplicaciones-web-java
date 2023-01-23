@@ -1,0 +1,277 @@
+<!DOCTYPE html
+   PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="es" xml:lang="es" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+   <style>
+      @import url(https://ikastaroak.ulhi.net/edu/style/ULHI22/base.css);
+   </style>
+   <link rel="stylesheet" type="text/css" href="A.content.css.pagespeed.cf.iOubMBlGNH.css" />
+   <style>
+      @import url(https://ikastaroak.ulhi.net/edu/style/ULHI22/nav.css);
+   </style>
+   <meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+   <title>2.4.- Sesiones persistentes. | Despliegue de aplicaciones web Java. </title>
+   <link rel="shortcut icon" href="./image/favicon.ico" type="image/x-icon" />
+   <meta http-equiv="content-language" content="es" />
+   <meta name="generator" content="eXeLearning 2.2 - exelearning.net" />
+   <script type="text/javascript" src="exe_jquery.js.pagespeed.jm.roLDJ9nOeu.js"></script>
+   <script src="common_i18n.js+common.js.pagespeed.jc.y5nduQJzlB.js"></script>
+   <script>eval(mod_pagespeed_hIROIhtvDX);</script>
+   <script>eval(mod_pagespeed_jj85KjL_7$);</script>
+   <meta name="viewport" content="width=device-width, initial-scale=1" />
+   <script
+      type="text/javascript">var path = "my_js.js"; if (document.domain == "ikastaroak.ulhi.net" || document.domain == "ikastaroakpre.ulhi.net") path = "https://ikastaroak.ulhi.net/edu/style/ULHI22/my_js.js"; document.write(unescape("%3Cscript src=\'" + path + "\'type=\'text/javascript\'%3E%3C/script%3E"));</script>
+</head>
+
+<body class="exe-web-site" id="exe-node-6">
+   <script type="text/javascript">document.body.className += " js"</script>
+   <div id="content">
+      <p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+      <div id="header">
+         <div id="headerContent">Despliegue de aplicaciones web Java.</div>
+      </div>
+      <div id="siteNav">
+         <ul>
+            <li><a href="website_index.html" class="daddy main-node">Despliegue de aplicaciones web Java.</a></li>
+            <li><a href="website_1_aplicaciones_web_y_servidores_de_aplicaciones.html" class="daddy">1.- Aplicaciones
+                  web y servidores de aplicaciones.</a>
+               <ul class="other-section">
+                  <li><a href="website_11_el_servidor_de_aplicaciones_tomcat.html" class="daddy">1.1.- El servidor de
+                        aplicaciones Tomcat.</a>
+                     <ul class="other-section">
+                        <li><a href="website_111_instalacin_y_configuracin_bsica.html" class="daddy">1.1.1.-
+                              Instalación y configuración básica.</a>
+                           <ul class="other-section">
+                              <li><a href="website_1111_instalacin_manual_en_linux.html" class="no-ch">1.1.1.1.-
+                                    Instalación manual en Linux.</a></li>
+                              <li><a href="website_1112_integracin_con_apache.html" class="no-ch">1.1.1.2.- Integración
+                                    con Apache.</a></li>
+                           </ul>
+                        </li>
+                        <li><a href="website_112_proteccin_del_servidor_de_aplicaciones.html" class="no-ch">1.1.2.-
+                              Protección del servidor de aplicaciones.</a></li>
+                     </ul>
+                  </li>
+                  <li><a href="website_12_aplicaciones_web_java_ee.html" class="daddy">1.2.- Aplicaciones web Java
+                        EE.</a>
+                     <ul class="other-section">
+                        <li><a href="website_121_servlets.html" class="daddy">1.2.1.- Servlets.</a>
+                           <ul class="other-section">
+                              <li><a href="website_1211_llamada_a_servlets.html" class="no-ch">1.2.1.1.- Llamada a
+                                    servlets.</a></li>
+                              <li><a href="website_1212_ejemplo.html" class="no-ch">1.2.1.2.- Ejemplo.</a></li>
+                           </ul>
+                        </li>
+                        <li><a href="website_122_java_server_pages__jsp.html" class="daddy">1.2.2.- Java Server Pages -
+                              JSP.</a>
+                           <ul class="other-section">
+                              <li><a href="website_1221_scripts_jsp.html" class="no-ch">1.2.2.1.- Scripts JSP.</a></li>
+                              <li><a href="website_1222_incluir_un_jsp_dentro_de_otro.html" class="no-ch">1.2.2.2.-
+                                    Incluir un JSP dentro de otro.</a></li>
+                           </ul>
+                        </li>
+                        <li><a href="website_123_arquitectura_mvc.html" class="daddy">1.2.3.- Arquitectura MVC.</a>
+                           <ul class="other-section">
+                              <li><a href="website_1231_java_server_faces__jsf.html" class="no-ch">1.2.3.1.- Java Server
+                                    Faces - JSF.</a></li>
+                              <li><a href="website_1232_frameworks_java.html" class="no-ch">1.2.3.2.- Frameworks
+                                    Java.</a></li>
+                           </ul>
+                        </li>
+                     </ul>
+                  </li>
+               </ul>
+            </li>
+            <li class="current-page-parent"><a href="website_2_despliegue_de_aplicaciones_con_tomcat.html"
+                  class="current-page-parent daddy">2.- Despliegue de aplicaciones con Tomcat</a>
+               <ul>
+                  <li><a href="website_21_estructura_de_ficheros.html" class="no-ch">2.1.- Estructura de ficheros.</a>
+                  </li>
+                  <li><a href="website_22_descriptor_de_despliegue.html" class="no-ch">2.2.- Descriptor de
+                        despliegue.</a></li>
+                  <li><a href="website_23_implementar_el_registro_de_acceso.html" class="no-ch">2.3.- Implementar el
+                        registro de acceso.</a></li>
+                  <li id="active"><a href="website_24_sesiones_persistentes.html" class="active no-ch">2.4.- Sesiones
+                        persistentes.</a></li>
+                  <li><a href="website_25_configurar_tomcat_en_cluster.html" class="no-ch">2.5.- Configurar Tomcat en
+                        cluster.</a></li>
+               </ul>
+            </li>
+            <li><a href="website_3_el_gestor_de_aplicaciones_web_de_tomcat.html" class="daddy">3.- El gestor de
+                  aplicaciones Web de Tomcat.</a>
+               <ul class="other-section">
+                  <li><a href="website_31_configuracin_del_gestor.html" class="no-ch">3.1.- Configuración del
+                        gestor.</a></li>
+                  <li><a href="website_32_conexin_al_gestor_de_aplicaciones_web_de_tomcat_de_forma_remota.html"
+                        class="no-ch">3.2.- Conexión al gestor de aplicaciones web de Tomcat de forma remota.</a></li>
+               </ul>
+            </li>
+            <li><a href="website_4_el_servidor_de_aplicaciones_wildflyjboss.html" class="daddy">4.- El servidor de
+                  aplicaciones WildFly-JBoss.</a>
+               <ul class="other-section">
+                  <li><a href="website_31_instalacin_y_configuracin_bsica.html" class="no-ch">3.1.- Instalación y
+                        configuración básica.</a></li>
+                  <li><a href="website_32_despliegue_de_aplicaciones_empresariales.html" class="no-ch">3.2.- Despliegue
+                        de aplicaciones empresariales.</a></li>
+                  <li><a href="website_33_estructura_de_carpetas_de_una_aplicacin_empresarial_archivo_ear.html"
+                        class="no-ch">3.3.- Estructura de carpetas de una aplicación empresarial. Archivo EAR.</a></li>
+               </ul>
+            </li>
+            <!--  li><a href="website_anexo_licencias_de_recursos.html" class="no-ch">Anexo.- Licencias de recursos.</a></li -->
+         </ul>
+      </div>
+      <div id='topPagination'>
+         <div class="pagination noprt">
+            <a href="website_23_implementar_el_registro_de_acceso.html" class="prev"><span><span>&laquo;
+                  </span>Anterior</span></a> <span class="sep">| </span><a
+               href="website_25_configurar_tomcat_en_cluster.html" class="next"><span>Siguiente<span>
+                     &raquo;</span></span></a>
+         </div>
+      </div>
+      <div id="main-wrapper">
+         <div id="main"><a name="main"></a>
+            <div id="nodeDecoration">
+               <h1 id="nodeTitle">2.4.- Sesiones persistentes.</h1>
+            </div>
+            <div class="iDevice_wrapper CasopracticofpdIdevice em_iDevice" id="id15">
+               <div class="iDevice emphasis_casopracticofpd">
+                  <div class="iDevice_header">
+                     <h2 class="iDeviceTitle">Caso práctico</h2>
+                  </div>
+                  <div class="iDevice_inner">
+                     <div class="iDevice_content_wrapper">
+                        <div id="ta15_66" class="block iDevice_content">
+                           <p>
+                              Sobre las aplicaciones <span lang="en">web</span> que han sido desarrolladas por la
+                              empresa <strong>BK programación</strong> y que ya están accesibles para sus clientes,
+                              <strong>Ada</strong> ha solicitado a <strong>Juan</strong> y <strong>María</strong> cómo
+                              poder, de algún modo, garantizar las sesiones, estableciendo en la configuración de
+                              <span lang="en">Tomcat</span> sesiones persistentes que aseguren sesiones fiables a las
+                              aplicaciones en caso de caída del servidor o de pérdida de conexión.
+                           </p>
+                           <!-- <script data-pagespeed-no-defer type="text/javascript">//<![CDATA[
+                                 (function () { for (var g = "function" == typeof Object.defineProperties ? Object.defineProperty : function (b, c, a) { if (a.get || a.set) throw new TypeError("ES3 does not support getters and setters."); b != Array.prototype && b != Object.prototype && (b[c] = a.value) }, h = "undefined" != typeof window && window === this ? this : "undefined" != typeof global && null != global ? global : this, k = ["String", "prototype", "repeat"], l = 0; l < k.length - 1; l++) { var m = k[l]; m in h || (h[m] = {}); h = h[m] } var n = k[k.length - 1], p = h[n], q = p ? p : function (b) { var c; if (null == this) throw new TypeError("The 'this' value for String.prototype.repeat must not be null or undefined"); c = this + ""; if (0 > b || 1342177279 < b) throw new RangeError("Invalid count value"); b |= 0; for (var a = ""; b;)if (b & 1 && (a += c), b >>>= 1) c += c; return a }; q != p && null != q && g(h, n, { configurable: !0, writable: !0, value: q }); var t = this; function u(b, c) { var a = b.split("."), d = t; a[0] in d || !d.execScript || d.execScript("var " + a[0]); for (var e; a.length && (e = a.shift());)a.length || void 0 === c ? d[e] ? d = d[e] : d = d[e] = {} : d[e] = c }; function v(b) { var c = b.length; if (0 < c) { for (var a = Array(c), d = 0; d < c; d++)a[d] = b[d]; return a } return [] }; function w(b) { var c = window; if (c.addEventListener) c.addEventListener("load", b, !1); else if (c.attachEvent) c.attachEvent("onload", b); else { var a = c.onload; c.onload = function () { b.call(this); a && a.call(this) } } }; var x; function y(b, c, a, d, e) { this.h = b; this.j = c; this.l = a; this.f = e; this.g = { height: window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight, width: window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth }; this.i = d; this.b = {}; this.a = []; this.c = {} } function z(b, c) { var a, d, e = c.getAttribute("data-pagespeed-url-hash"); if (a = e && !(e in b.c)) if (0 >= c.offsetWidth && 0 >= c.offsetHeight) a = !1; else { d = c.getBoundingClientRect(); var f = document.body; a = d.top + ("pageYOffset" in window ? window.pageYOffset : (document.documentElement || f.parentNode || f).scrollTop); d = d.left + ("pageXOffset" in window ? window.pageXOffset : (document.documentElement || f.parentNode || f).scrollLeft); f = a.toString() + "," + d; b.b.hasOwnProperty(f) ? a = !1 : (b.b[f] = !0, a = a <= b.g.height && d <= b.g.width) } a && (b.a.push(e), b.c[e] = !0) } y.prototype.checkImageForCriticality = function (b) { b.getBoundingClientRect && z(this, b) }; u("pagespeed.CriticalImages.checkImageForCriticality", function (b) { x.checkImageForCriticality(b) }); u("pagespeed.CriticalImages.checkCriticalImages", function () { A(x) }); function A(b) { b.b = {}; for (var c = ["IMG", "INPUT"], a = [], d = 0; d < c.length; ++d)a = a.concat(v(document.getElementsByTagName(c[d]))); if (a.length && a[0].getBoundingClientRect) { for (d = 0; c = a[d]; ++d)z(b, c); a = "oh=" + b.l; b.f && (a += "&n=" + b.f); if (c = !!b.a.length) for (a += "&ci=" + encodeURIComponent(b.a[0]), d = 1; d < b.a.length; ++d) { var e = "," + encodeURIComponent(b.a[d]); 131072 >= a.length + e.length && (a += e) } b.i && (e = "&rd=" + encodeURIComponent(JSON.stringify(B())), 131072 >= a.length + e.length && (a += e), c = !0); C = a; if (c) { d = b.h; b = b.j; var f; if (window.XMLHttpRequest) f = new XMLHttpRequest; else if (window.ActiveXObject) try { f = new ActiveXObject("Msxml2.XMLHTTP") } catch (r) { try { f = new ActiveXObject("Microsoft.XMLHTTP") } catch (D) { } } f && (f.open("POST", d + (-1 == d.indexOf("?") ? "?" : "&") + "url=" + encodeURIComponent(b)), f.setRequestHeader("Content-Type", "application/x-www-form-urlencoded"), f.send(a)) } } } function B() { var b = {}, c; c = document.getElementsByTagName("IMG"); if (!c.length) return {}; var a = c[0]; if (!("naturalWidth" in a && "naturalHeight" in a)) return {}; for (var d = 0; a = c[d]; ++d) { var e = a.getAttribute("data-pagespeed-url-hash"); e && (!(e in b) && 0 < a.width && 0 < a.height && 0 < a.naturalWidth && 0 < a.naturalHeight || e in b && a.width >= b[e].o && a.height >= b[e].m) && (b[e] = { rw: a.width, rh: a.height, ow: a.naturalWidth, oh: a.naturalHeight }) } return b } var C = ""; u("pagespeed.CriticalImages.getBeaconData", function () { return C }); u("pagespeed.CriticalImages.Run", function (b, c, a, d, e, f) { var r = new y(b, c, a, e, f); x = r; d && w(function () { window.setTimeout(function () { A(r) }, 0) }) }); })(); pagespeed.CriticalImages.Run('/mod_pagespeed_beacon', 'http://ikastaroak.birt.eus/edu/argitalpen/backupa/20200331/1920k/es/DAW/DEAW/DEAW05/es_DAW_DEAW05_Contenidos/website_24_sesiones_persistentes.html', 'nXzXivl0t7', true, false, 'V6F1vvfx1oc');
+//]]></script><img alt="Pantalla de login." class="elemento_centrado" height="132"
+                              src="xDAW03_CONT_R10_login_acceso.jpg.pagespeed.ic.I33zWFQBHP.jpg"
+                              style="width: 200px; height: 132px" title="Login acceso." width="200"
+                              data-pagespeed-url-hash="229171115"
+                              onload="pagespeed.CriticalImages.checkImageForCriticality(this);" /> -->
+
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="iDevice_wrapper FreeTextfpdIdevice" id="id16">
+               <div class="iDevice emphasis0">
+                  <div id="ta16_73" class="block iDevice_content">
+                     <p>
+                        Las sesiones activas por parte de clientes a aplicaciones <span lang="en">web</span> alojadas en
+                        servidores <span lang="en">web</span> <span lang="en">Tomcat</span>, por defecto, están
+                        configuradas para mantenerse en caso de posibles pérdidas de conexión con el servidor o
+                        posibles reinicios del mismo; a pesar de todo ello es posible establecer un control mayor sobre
+                        dichas sesiones.
+                     </p>
+                     <p>
+                        Por lo que respecta a las sesiones inactivas (pero todavía no caducadas) es posible
+                        configurarlas de forma que se almacenen en disco liberando, como consecuencia de ello, los
+                        recursos de memoria asociados. Al parar <span lang="en">Tomcat</span> las sesiones activas se
+                        vuelcan a disco de manera que, al volver a arrancarlo, se podrán restaurar.
+                     </p>
+                     <p>
+                        Las sesiones con un tiempo de vida que supere un límite se copian automáticamente a disco por
+                        seguridad para evitar posibles bloqueos de sesión.
+                     </p>
+                     <p>
+                        Para configurar las sesiones persistentes tendremos que gestionar el elemento
+                        <code>&lt;Manager&gt;</code> como un subelemento de <code>&lt;Context&gt;</code> de foma que
+                        podemos actuar a dos niveles en función de si pretendemos que la configuración establecida se
+                        aplique a todas las aplicaciones del servidor o a una aplicación concreta.
+                     </p>
+                     <p>
+                        Si configuramos las sesiones persistentes de forma global tenemos que manipular el archivo
+                        <strong>/conf/<span lang="en">context.xml</span></strong>, mientras que si queremos configurar
+                        las sesiones a nivel local a una aplicación <span lang="en">web</span> determinada tendríamos
+                        que adaptar el archivo <strong>&lt;CATALINA_HOME&gt;/conf/<span
+                              lang="en">context.xml</span></strong> correspondiente a la aplicación.
+                     </p>
+                     <p>
+                        Un ejemplo de configuración podría ser el siguiente (se emplean comentarios para explicar cada
+                        uno de los parámetros):
+                     </p>
+                     <div class="codigo elemento_centrado" style="width: 138.55em">
+                        <div class="texto_izquierda">
+                           <pre>
+<code>&lt;Context&gt;</code>
+</pre>
+                           <pre>
+<code>     &lt;!-- classname  especifica la clase del servidor que implementa el gestor, es recomendable utilizar      el org.apache.catalina.session.PersistentManager --&gt;</code>
+</pre>
+                           <pre>
+<code>     &lt;Manager className=&quot;org.apache.catalina.session.PersistentManager&quot;</code>
+</pre>
+                           <pre>
+<code>             &lt;!--saveOnRestart=true para indicar que se guarden todas las sesiones al reiniciar el                servidor --&gt;</code>
+</pre>
+                           <pre>
+<code>saveOnRestart=&quot;true&quot;</code>
+</pre>
+                           <pre>
+<code>&lt;!--maxActiveSession cuando se supera el límite aquí establecido se comienzan a enviar a disco las nuevas sesiones. Se establece un valor -1 para indicar ilimitadas sesiones--&gt;</code>
+</pre>
+                           <pre>
+<code>maxActiveSession=&quot;3&quot;</code>
+</pre>
+                           <pre>
+<code>&lt;!--minIdleSwap establece el número mínimo de segundos que transcurren antes de que una sesión pueda copiarse al disco duro --&gt;</code>
+</pre>
+                           <pre>
+<code>minIdleSwap=&quot;0&quot;</code>
+</pre>
+                           <pre>
+<code>&lt;!--maxIdleSwap indica el número máximo de segundos que transcurren antes de que una sesión pueda copiarse al disco duro --&gt;</code>
+</pre>
+                           <pre>
+<code>maxIdleSwap=&quot;60&quot;</code>
+</pre>
+                           <pre>
+<code>&lt;!--maxIdleBackup para indicar el número de segundos desde que una sesión estuvo activa por última vez hasta que se envíe al disco. La sesión no es eliminada de memoria. Permite restauración de la sesión en caso de caída del servidor. --&gt;</code>
+</pre>
+                           <pre>
+<code>maxIdleBackup=&quot;5&quot;&gt;</code>
+</pre>
+                           <pre>
+<code>&lt;!--Store indica cómo y donde almacenar la sesión, están disponibles las siguientes implementaciones: org.apache.catalina.session.FileStore y org.apache.catalina.session.JDBCStore --&gt;</code>
+</pre>
+                           <pre>
+<code>     &lt;Store className=&quot;org.apache.catalina.session.FileStore&quot;/&gt;</code>
+</pre>
+                           <pre>
+<code>&lt;/Manager&gt;</code>
+</pre>
+                           <pre>
+<code>&lt;/Context&gt;</code>
+</pre>
+                        </div>
+                     </div>
+
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div id='bottomPagination'>
+         <div class="pagination noprt">
+            <a href="website_23_implementar_el_registro_de_acceso.html" class="prev"><span><span>&laquo;
+                  </span>Anterior</span></a> <span class="sep">| </span><a
+               href="website_25_configurar_tomcat_en_cluster.html" class="next"><span>Siguiente<span>
+                     &raquo;</span></span></a>
+         </div>
+      </div>
+   </div>
+   <script type="text/javascript" src="venobox.min.js.pagespeed.jm.gjW24KJanc.js"></script>
+   <script>$(document).ready(function () { $('.venobox').venobox({ titleattr: 'data-title' }); });</script>
+</body>
+
+</html>
